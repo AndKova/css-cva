@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@700 & display=swap');
+
+/* * {
+    padding: 0; отсутствуют эти стили, т.к. задано значение ноль
+    margin: 0;
+} */
+
+
+body {
+    background: rgb(230, 226, 226);
+    color: rgb(37, 35, 35);
+    font-size: 16px; /*задание базового шрифта - 16 эталон*/
+    font-weight: normal; /*жироность шрифта*/
+    font-family: 'Roboto', sans-serif;
+    /*font: normal 16px 'Roboto', sans-serif; -  - быть записанно так, но сокращенно*/
+    /*font-family: Georgia, 'Times New Roman', Times, serif;  стилистика сайта*/
+    
+
+}
+
+a {
+    color: #000;
+    text-decoration: none; /*не будет подчеркивания*/
+    
+}
+
+a:hover {
+    text-decoration: underline ;
+      /* text-decoration: line-through; перечеркивает при новедении (hover) */
+}
+
+a:visited {
+    color: grey;
+}
+
+.avatar1 {
+    width: 200px;
+    border-radius: 50px; /* скругление пикчи*/
+    box-shadow: 4px 4px 14px rgba(0,0,0,025); /* найстройка тени*/
+}
+
+.info {
+     display: flex; /*выровняет все дочерние элементы в одну строчку */
+    margin-bottom: 20px;
+
+}
+
+@media (max-width: 700px) {
+    .info {
+        text-align: center;
+        display: block;
+    }
+}
+
+.info-text {
+    margin-left: 15px;
+}
+
+.info-text h3 {
+margin-bottom: 10px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 0px 20px; /*0 свепху и снизу, 20 слева и справа*/
+    /* list-style: none;  отключение списка*/
+}
+
+.list li {
+    color: #86898f;
+    margin-bottom: 10px;
+}
+
+.info p { /* изменения всех вложенных пораграфов в info */
+    color: #86898f;
+    margin: 0px;
+    font-style: italic;
+    font-weight: bold; 
+    /* text-decoration: line-through; зачернутый текст */
+    /* text-transform: lowercase или uppercase ; все с маленких букв или все с болших*/
+    /* letter-spacing: 5px; пространство между буквами */
+    /* word-spacing: 5px;  пространство между буквами*/
+}
+
+/* box model */
+.social {
+        /* padding: 15px 40px ; сверху и снизу 15px, справа и слева 40px */
+    /* padding: 15px 20px 25px 30 px ; порядок сверху и по часовой */
+    /* padding-top: auto;
+    padding-bottom: auto;
+    padding-left: auto;
+    padding-right: auto; */
+    background: rgb(75, 100, 87);
+    border-radius: 35px;
+    padding: 15px; /*растояние от границ*/
+
+    margin: 20px; /* растояние между секциями*/
+    border: 5px solid #73837a; /* граница*/
+    /* border-style: dotted ; границы в точку */
+    /* border-right-color: blue;  правая граница синяя*/
+
+}
+.container {
+
+    max-width: 750px; /* ширина используемого пространства на странице, max- адаптирует под ширину страницы*/
+    margin: auto;
+    padding-top: 30px;
+}
+
+/* .box-model > div{}  - только дети принимают этот стиль*/
+
+
+.bg-yellow {
+background: #fff9dc;
+}
+
+.bg-green {
+background: #e6ffe7;
+}
+
+.bg-red {
+background: #ffe5e5;
+}
+
+
+.card {
+    padding: 15px 20px;
+    margin-bottom: 20px;
+     /* margin-bottom: 20px; лучше "margin-bottom:", всегда сохронится, если удалить часть инфы сверху  ; */
+     border-radius: 35px;
+}
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table td:nth-child(2), .table td:nth-child(3) {
+    color: #86898f;
+    } /* nth-child - псевдо силектор, для коректировки определенных элементов*/
+
+/* .table tr:nth-child(even) {
+    background: #000;
+}  каждая четная строчка задаст значение цвета*/
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc ;
+}
+
+.contact h2{
+    text-align: center;
+}
+
+.form-group label {
+display: block; /*каждый из label должен быть display: block; */
+font-size: 14px;
+color: #86898f;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: #000;
+    padding: 15px 0 10px;
+    outline: none;
+    font-family: inherit; /*наследуется шрифт*/
+
+}
+
+.row {
+    display: flex; /*задает положения в столбик */
+    margin-bottom: 20px;
+
+}
+
+.row > .form-group { /*задаем все для form-group*/
+    width: 50%; /*задаем использование всей ширины*/
+    margin-right: 20px;
+}
+
+.row > .form-group:first-child {
+    margin-right:0 ;
+}
+
+.btn    {
+    background: #111;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+
+}
+
+ .btn:hover { /*при наведении подсвечивает кнопку, для понимания интерактива этой кнопки */
+    opacity: 0.9;
+}
+
+/* position
+.position {
+position: relative;
+border: 4px solid black;
+margin-top: 40px;
+padding: 20px;
+height: 300px;
+}
+
+.box {
+    position: fixed;   
+    /*fixed - фиксирует блок на экране по указанным отступам */
+    /* absolute меняет поведение элемента, при абсолютном позиционировании, то блок position не видит, что контент внутри этого блока*/ 
+    /* bottom: 20px; */
+    /* top: 0px;
+    bottom: 50%; 
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    color: aquamarine;
+    border-radius: 50px;
+    background: red;
+}   */
